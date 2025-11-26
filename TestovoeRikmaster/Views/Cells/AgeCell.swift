@@ -64,9 +64,16 @@ class AgeCell: UITableViewCell {
         femalePercentLabel.pin.left(to: femaleProgress.edge.right).marginLeft(4).vCenter(to: femaleProgress.edge.vCenter).sizeToFit()
     }
     
-    func configure(range: String, maleCount: Int, femaleCount: Int, totalUsers: Int) {
+    func configure(
+        range: String,
+        maleCount: Int,
+        femaleCount: Int,
+        malePercentage: Int,
+        femalePercentage: Int
+    ) {
         rangeLabel.text = range
-        
+
+        let totalUsers = maleCount + femaleCount
         guard totalUsers > 0 else {
             maleProgress.frame.size.width = 5
             femaleProgress.frame.size.width = 5
@@ -74,19 +81,16 @@ class AgeCell: UITableViewCell {
             femalePercentLabel.text = "0%"
             return
         }
-        
+
         let maxWidth = contentView.bounds.width - 100
         
-        let malePercent = Float(maleCount) / Float(totalUsers) * 100
-        let femalePercent = Float(femaleCount) / Float(totalUsers) * 100
-        
-        let maleWidth: CGFloat = malePercent == 0 ? 5 : max(CGFloat(malePercent / 100) * maxWidth, minProgressWidth)
-        let femaleWidth: CGFloat = femalePercent == 0 ? 5 : max(CGFloat(femalePercent / 100) * maxWidth, minProgressWidth)
+        let maleWidth: CGFloat = malePercentage == 0 ? 5 : max(CGFloat(malePercentage) / 100 * maxWidth, minProgressWidth)
+        let femaleWidth: CGFloat = femalePercentage == 0 ? 5 : max(CGFloat(femalePercentage) / 100 * maxWidth, minProgressWidth)
         
         maleProgress.frame.size.width = maleWidth
         femaleProgress.frame.size.width = femaleWidth
         
-        malePercentLabel.text = "\(Int(malePercent))%"
-        femalePercentLabel.text = "\(Int(femalePercent))%"
+        malePercentLabel.text = "\(malePercentage)%"
+        femalePercentLabel.text = "\(femalePercentage)%"
     }
 }

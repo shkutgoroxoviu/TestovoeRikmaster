@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		015C1B432ED60C8E0010E3D9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 015C1B422ED60C8E0010E3D9 /* SDWebImage */; };
 		015C1B452ED60C8E0010E3D9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 015C1B442ED60C8E0010E3D9 /* SDWebImageMapKit */; };
-		017D208A2ED4F2FE000239C9 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 017D20892ED4F2FE000239C9 /* DGCharts */; };
+		015C1DA12ED711A20010E3D9 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 015C1DA02ED711A20010E3D9 /* DGCharts */; settings = {ATTRIBUTES = (Required, ); }; };
 		01E48DD22ED4E9CD00456D12 /* StatisticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 01E48DD12ED4E9CD00456D12 /* StatisticsCore */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015C1DA12ED711A20010E3D9 /* DGCharts in Frameworks */,
 				015C1B432ED60C8E0010E3D9 /* SDWebImage in Frameworks */,
-				017D208A2ED4F2FE000239C9 /* DGCharts in Frameworks */,
 				015C1B452ED60C8E0010E3D9 /* SDWebImageMapKit in Frameworks */,
 				01E48DD22ED4E9CD00456D12 /* StatisticsCore in Frameworks */,
 			);
@@ -67,10 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015C1D9E2ED711660010E3D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		01E48D9B2ED4E0F500456D12 = {
 			isa = PBXGroup;
 			children = (
 				01E48DA62ED4E0F500456D12 /* TestovoeRikmaster */,
+				015C1D9E2ED711660010E3D9 /* Frameworks */,
 				01E48DA52ED4E0F500456D12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,10 +113,10 @@
 			name = TestovoeRikmaster;
 			packageProductDependencies = (
 				01E48DD12ED4E9CD00456D12 /* StatisticsCore */,
-				017D20892ED4F2FE000239C9 /* DGCharts */,
-				017D208B2ED4F2FE000239C9 /* DGChartsDynamic */,
 				015C1B422ED60C8E0010E3D9 /* SDWebImage */,
 				015C1B442ED60C8E0010E3D9 /* SDWebImageMapKit */,
+				015C1DA02ED711A20010E3D9 /* DGCharts */,
+				015C1DA22ED711A20010E3D9 /* DGChartsDynamic */,
 			);
 			productName = TestovoeRikmaster;
 			productReference = 01E48DA42ED4E0F500456D12 /* TestovoeRikmaster.app */;
@@ -140,8 +148,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				01E48DD02ED4E9CD00456D12 /* XCLocalSwiftPackageReference "TestovoeRikmaster/StatisticsCorePackage" */,
-				017D20882ED4F2FE000239C9 /* XCRemoteSwiftPackageReference "Charts" */,
 				015C1B412ED60C8E0010E3D9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				015C1D9F2ED711A20010E3D9 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 01E48DA52ED4E0F500456D12 /* Products */;
@@ -406,7 +414,7 @@
 				minimumVersion = 5.21.3;
 			};
 		};
-		017D20882ED4F2FE000239C9 /* XCRemoteSwiftPackageReference "Charts" */ = {
+		015C1D9F2ED711A20010E3D9 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
@@ -427,14 +435,14 @@
 			package = 015C1B412ED60C8E0010E3D9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
 		};
-		017D20892ED4F2FE000239C9 /* DGCharts */ = {
+		015C1DA02ED711A20010E3D9 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 017D20882ED4F2FE000239C9 /* XCRemoteSwiftPackageReference "Charts" */;
+			package = 015C1D9F2ED711A20010E3D9 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
 		};
-		017D208B2ED4F2FE000239C9 /* DGChartsDynamic */ = {
+		015C1DA22ED711A20010E3D9 /* DGChartsDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 017D20882ED4F2FE000239C9 /* XCRemoteSwiftPackageReference "Charts" */;
+			package = 015C1D9F2ED711A20010E3D9 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGChartsDynamic;
 		};
 		01E48DD12ED4E9CD00456D12 /* StatisticsCore */ = {
